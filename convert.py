@@ -453,9 +453,9 @@ def create_rule(line): # Rule conversion
 
             # Create Junos config
             # List of syntax's to use in rules at end of converted_line variable for the sake of DRY
-            rule_params = [f'match source-address {src_addr}',
-                            f'match destination-address {dst_addr}',
-                            f'match application {junos_service}',
+            rule_params = [f'match source-address {ns_src_addr}',
+                            f'match destination-address {ns_dst_addr}',
+                            f'match application {ns_service}',
                             f'then {action}']
 
             # Form each line of the rule using the above list
