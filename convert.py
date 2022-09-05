@@ -446,7 +446,7 @@ def create_rule(line): # Rule conversion
             dst_addr = master.address_and_set_dicts[ns_dst_addr]
             
             ns_service = re.findall(rf'"([^"]*)"', line)[4]  # Fifth instance of "<something>"
-            junos_service = master.service_dicts[ns_service]
+            #junos_service = master.service_dicts[ns_service]  ---
 
             # Look for permit or deny
             action = re.findall(rf'\b(permit|deny)', line)[-1] # last instance of permit or deny
